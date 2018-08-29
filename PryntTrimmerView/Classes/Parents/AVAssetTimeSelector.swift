@@ -55,6 +55,7 @@ public class AVAssetTimeSelector: UIView, UIScrollViewDelegate {
 
     func assetDidChange(newAsset: AVAsset?) {
         if let asset = newAsset {
+            constrainAssetPreview()
             assetPreview.regenerateThumbnails(for: asset)
         }
     }
